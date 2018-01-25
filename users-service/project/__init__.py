@@ -1,7 +1,6 @@
 import os
-from flask import Flask, jsonify
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-import datetime
 
 
 # instantiate the db
@@ -27,5 +26,4 @@ def create_app():
     # register blueprints
     from project.api.users import users_blueprint
     app.register_blueprint(users_blueprint)
-
     return app
